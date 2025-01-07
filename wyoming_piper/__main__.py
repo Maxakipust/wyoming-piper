@@ -77,6 +77,11 @@ async def main() -> None:
         version=__version__,
         help="Print version and exit",
     )
+    parser.add_argument(
+        "--cuda",
+        action="store_true",
+        help="Use '--cuda' option for piper"
+    )
     args = parser.parse_args()
 
     if not args.download_dir:
